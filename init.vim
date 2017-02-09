@@ -13,32 +13,32 @@ call plug#begin()
 		UpdateRemotePlugins
 	endfunction
 	Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
-	Plug 'carlitux/deoplete-ternjs'
-	Plug 'morhetz/gruvbox'
-	Plug 'othree/yajs.vim'
-	Plug 'othree/es.next.syntax.vim'
-	Plug 'neomake/neomake'
-	Plug 'terryma/vim-expand-region'
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-repeat'
-	Plug 'w0rp/ale'
-	Plug 'tpope/vim-commentary'
-	Plug 'mxw/vim-jsx'
-	Plug 'tpope/vim-rsi'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'airblade/vim-gitgutter'
-	Plug 'tpope/vim-fugitive'
-	Plug 'tpope/vim-abolish'
-	Plug 'rhysd/nyaovim-markdown-preview'
+	Plug 'carlitux/deoplete-ternjs'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 	Plug 'maksimr/vim-jsbeautify'
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'mileszs/ack.vim'
+	Plug 'morhetz/gruvbox'
+	Plug 'mxw/vim-jsx'
+	Plug 'neomake/neomake'
+	Plug 'othree/es.next.syntax.vim'
+	Plug 'othree/yajs.vim'
+	Plug 'rhysd/nyaovim-markdown-preview'
 	Plug 'roblillack/vim-bufferlist'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'subosito/nginx.vim'
+	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+	Plug 'terryma/vim-expand-region'
+	Plug 'tpope/vim-abolish'
+	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-unimpaired'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'w0rp/ale'
 call plug#end()
 
 " basics
@@ -74,17 +74,7 @@ nnoremap <leader>ff :FZF<cr>
 nnoremap <leader>fh :FZF ~<cr>
 """ ack!
 nnoremap <leader>fa :Ack!<space>
-""" window operations
-nnoremap @sh h<cr>
-nnoremap @sj j<cr>
-nnoremap @sk k<cr>
-nnoremap @sl l<cr>
-nnoremap 1 o
 """ buffer operations
-nnoremap <Right> :bnext<cr>
-nnoremap <Left> :bprev<cr>
-nnoremap l :bnext<cr>
-nnoremap h :bprev<cr>
 nnoremap <leader>bn :bnext<cr>
 nnoremap <leader>bp :bprev<cr>
 nnoremap <leader>bd :bd<cr>:bd<cr>:NERDTreeToggle<cr>
@@ -112,15 +102,19 @@ nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Git push<CR>
 nnoremap <leader>gpl :Git pull<CR>
+""" gitgutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
 
 "" insert
 """ readline/emacs
-inoremap  k
-inoremap  j
-inoremap  $
-inoremap  ^
-inoremap  u
+inoremap <C-p> <C-o>k
+inoremap <C-n> <C-o>j
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>^
+inoremap <C-_> <C-o>u
 inoremap <C-g> <Esc>
+inoremap <C-k> <C-o>d$
 " files/filetypes
 au BufRead,BufNewFile .wmrc set filetype=dosini
 
