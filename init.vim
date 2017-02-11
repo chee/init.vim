@@ -25,9 +25,11 @@ call plug#begin()
 	Plug 'othree/es.next.syntax.vim'
 	Plug 'othree/yajs.vim'
 	Plug 'rhysd/nyaovim-markdown-preview'
+	Plug 'ryanoasis/vim-devicons'
 	Plug 'roblillack/vim-bufferlist'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'subosito/nginx.vim'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 	Plug 'terryma/vim-expand-region'
 	Plug 'tpope/vim-abolish'
