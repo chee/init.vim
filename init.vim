@@ -21,7 +21,6 @@ call plug#begin()
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
 	Plug 'mxw/vim-jsx'
-	Plug 'neomake/neomake'
 	Plug 'othree/es.next.syntax.vim'
 	Plug 'othree/yajs.vim'
 	Plug 'rhysd/nyaovim-markdown-preview'
@@ -141,21 +140,6 @@ let g:tern_request_timeout = 6000
 let g:tern#command = ['tern']
 let g:tern#arguments = ['--persistent']
 let g:deoplete#sources#tss#javascript_support = 0
-
-" neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-augroup init
-	autocmd! BufWritePost * Neomake
-augroup END
-let g:neomake_warning_sign = {
-	\ 'text': '?',
-	\ 'texthl': 'WarningMsg',
-	\ }
-
-let g:neomake_error_sign = {
-	\ 'text': 'X',
-	\ 'texthl': 'ErrorMsg',
-	\ }
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
