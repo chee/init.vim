@@ -27,6 +27,7 @@ call plug#begin()
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'roblillack/vim-bufferlist'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'SirVer/ultisnips'
 	Plug 'subosito/nginx.vim'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
