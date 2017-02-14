@@ -47,20 +47,24 @@ call plug#begin()
 call plug#end()
 
 " basics
+colorscheme gruvbox
+filetype plugin indent on
+set background=dark
+let &colorcolumn=join(range(81,250), ',')
+" gruvbox's dark0, so it just looks like cursorline stops at 80
+highlight ColorColumn guibg=#282828
+set cursorline
+set expandtab
+set hidden
+set ignorecase
+set list
+set magic
+set nostartofline
 set number
 set shiftwidth=2
-set nostartofline
-set magic
-set ignorecase
 set smartcase
-filetype plugin indent on
 set tabstop=2
-set expandtab
 set termguicolors
-set background=dark
-set hidden
-set list
-colorscheme gruvbox
 
 " keys
 "" leader
