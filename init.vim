@@ -41,6 +41,7 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'w0rp/ale'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " basics
@@ -79,7 +80,7 @@ nnoremap <leader>fa :Ack!<space>
 """ buffer operations
 nnoremap <leader>bn :bnext<cr>
 nnoremap <leader>bp :bprev<cr>
-nnoremap <leader>bd :bd<cr>:bd<cr>:NERDTreeToggle<cr>
+nnoremap <leader>bd :bd<cr>
 nnoremap <leader>bl :call BufferList()<cr>
 """ push words about
 nnoremap <silent> gh "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>:nohlsearch<CR>
