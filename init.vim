@@ -122,6 +122,7 @@ inoremap <C-g> <Esc>
 inoremap <C-k> <C-o>d$
 " files/filetypes
 au BufRead,BufNewFile .wmrc set filetype=dosini
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
