@@ -52,6 +52,8 @@ set background=dark
 let &colorcolumn=join(range(81,250), ',')
 " gruvbox's dark0, so it just looks like cursorline stops at 80
 highlight ColorColumn guibg=#282828
+" so listchars are only visible on the current line
+highlight SpecialKey guifg=#282828
 set cursorline
 set expandtab
 set hidden
