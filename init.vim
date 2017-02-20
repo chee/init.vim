@@ -22,7 +22,6 @@ call plug#begin()
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
-	Plug 'rhysd/nyaovim-markdown-preview'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'roblillack/vim-bufferlist'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
