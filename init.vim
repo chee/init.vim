@@ -44,17 +44,6 @@ call plug#begin()
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-function! Gack(cmd, args)
-	try
-		system('git status')
-		let g:ackprg = 'git grep -Hni'
-	catch
-		let g:ackprg = 'ack -s -H --nopager --nocolor --nogroup --column'
-	endtry
-	call ack#Ack(a:cmd, a:args)
-endfunction
-
-command! -bang -nargs=* -complete=file Gack call Gack('grep<bang>', <q-args>)
 
 " basics
 colorscheme gruvbox
@@ -96,7 +85,7 @@ nnoremap <leader>\ :NERDTreeToggle<cr>
 nnoremap <leader>ff :FZF<cr>
 nnoremap <leader>fh :FZF ~<cr>
 """ ack!
-nnoremap <leader>fa :Gack!<space>
+nnoremap <leader>fa :Ack!<space>
 """ buffer operations
 nnoremap <leader>bn :bnext<cr>
 nnoremap <leader>bp :bprev<cr>
