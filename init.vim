@@ -16,7 +16,7 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'editorconfig/editorconfig-vim'
-	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'maksimr/vim-jsbeautify'
