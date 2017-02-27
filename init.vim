@@ -55,6 +55,7 @@ highlight ColorColumn guibg=#282828
 " so listchars are only visible on the current line
 highlight SpecialKey guifg=#282828
 if has('mouse') | set mouse=a | endif
+set cino=:0,(0
 set clipboard=unnamedplus
 set cursorline
 set expandtab
@@ -191,7 +192,7 @@ function! PlsFollowSymlink(...)
 		" Only display a note when editing a file, especially not for `:help`.
 		redraw	" Redraw now, to avoid hit-enter prompt.
 		echomsg 'Resolved symlink: =>' l:resolvedfile
-	 write!
+		write!
 	endif
 endfunction
 command! -bar FollowSymlink call PlsFollowSymlink()
