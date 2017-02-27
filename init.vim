@@ -49,6 +49,7 @@ call plug#end()
 colorscheme gruvbox
 filetype plugin indent on
 set background=dark
+hi Search guibg=#ff2a50 guifg=#ffffff
 let &colorcolumn=join(range(81,250), ',')
 " gruvbox's dark0, so it just looks like cursorline stops at 80
 highlight ColorColumn guibg=#282828
