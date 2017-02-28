@@ -45,7 +45,6 @@ call plug#begin()
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-
 " basics
 colorscheme gruvbox
 filetype plugin indent on
@@ -131,6 +130,10 @@ inoremap <C-a> <C-o>^
 inoremap <C-_> <C-o>u
 inoremap <C-g> <Esc>
 inoremap <C-k> <C-o>d$
+
+command! SudoWrite w !sudo sponge %
+cabbrev w!! <c-r>=(getcmdtype()==':' && getcmdpos()==-1 ? 'SudoWrite' : 'w!!')<cr>
+
 " files/filetypes
 au BufRead,BufNewFile .wmrc set filetype=dosini
 au BufRead,BufNewFile *.md setlocal textwidth=80
