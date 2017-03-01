@@ -19,6 +19,7 @@ call plug#begin()
 	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
+	Plug 'kassio/neoterm'
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
@@ -120,6 +121,14 @@ nnoremap <leader>gbpr :!zsh -ci 'bpr; exit'<cr>
 """ gitgutter
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+""" neoterm
+nnoremap <leader>xe :TREPLSendLine<cr>
+nnoremap <leader>xr :TREPLSendFile<cr>
+vnoremap <leader>xe :TREPLSendSelection<cr>
+
+nnoremap <leader>tx :call neoterm#close()<cr>
+nnoremap <leader>tl :call neoterm#clear()<cr>
+nnoremap <leader>tc :call neoterm#kill()<cr>
 
 "" insert
 """ readline/emacs
