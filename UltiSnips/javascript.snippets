@@ -16,11 +16,11 @@ snippet ir "import react" b
 import React from 'react'
 endsnippet
 
-snippet rrcc "React Redux Class Component" b
+snippet cnt "react redux container " b
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
-class ${1:`!v expand('%:t:r')`} extends Component {
+export class ${1:`!v expand('%:t:r')`} extends Component {
 	render() {
 		return (
 				$3
@@ -33,4 +33,18 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)($1);
+endsnippet
+
+snippet cmp "react component" b
+import React, {Component} from 'react'
+
+class ${1:`!v expand('%:t:r')`} extends Component {
+	render() {
+		return (
+				$3
+		)
+	}
+}
+
+export default $1
 endsnippet
