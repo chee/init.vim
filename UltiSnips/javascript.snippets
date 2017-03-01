@@ -1,7 +1,7 @@
 snippet sc "stateless component" b
 import React from 'react'
 
-const ${1} = () => (
+const ${1:`!v expand('%:t:r')`} = () => (
 	${2}
 )
 
@@ -47,4 +47,8 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 }
 
 export default $1
+endsnippet
+
+snippet iml "import local" b
+import ${1} from './$1'
 endsnippet
