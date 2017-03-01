@@ -1,10 +1,36 @@
 snippet sc "stateless component" b
+import React from 'react'
+
 const ${1} = () => (
 	${2}
 )
+
 export default $1
 endsnippet
 
 snippet cs "const string" b
 const ${1} = '$1'
+endsnippet
+
+snippet ir "import react" b
+import React from 'react'
+endsnippet
+
+snippet rrcc "React Redux Class Component" b
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
+
+class ${1:`!v expand('%:t:r')`} extends Component {
+	render() {
+		return (
+				$3
+		)
+	}
+}
+
+function mapStateToProps(state) {
+	return {}
+}
+
+export default connect(mapStateToProps)($1);
 endsnippet
