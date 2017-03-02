@@ -13,9 +13,13 @@ call plug#begin()
 		UpdateRemotePlugins
 	endfunction
 	Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+	Plug 'SirVer/ultisnips'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'cakebaker/scss-syntax.vim'
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'editorconfig/editorconfig-vim'
+	Plug 'elzr/vim-json'
 	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
@@ -24,15 +28,16 @@ call plug#begin()
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
 	Plug 'othree/javascript-libraries-syntax.vim'
-	Plug 'ryanoasis/vim-devicons'
+	Plug 'othree/nginx-contrib-vim'
+	Plug 'pangloss/vim-javascript'
 	Plug 'roblillack/vim-bufferlist'
+	Plug 'ryanoasis/vim-devicons'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-	Plug 'sheerun/vim-polyglot'
-	Plug 'SirVer/ultisnips'
+	Plug 'stephpy/vim-yaml'
 	Plug 'subosito/nginx.vim'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 	Plug 'terryma/vim-expand-region'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'tpope/vim-abolish'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-fugitive'
@@ -41,9 +46,9 @@ call plug#begin()
 	Plug 'tpope/vim-unimpaired'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	Plug 'vim-ruby/vim-ruby'
 	Plug 'w0rp/ale'
 	Plug 'xolox/vim-misc'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " basics
