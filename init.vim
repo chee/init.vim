@@ -28,7 +28,6 @@ call plug#begin()
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
 	Plug 'mxw/vim-jsx'
-	Plug 'othree/javascript-libraries-syntax.vim'
 	Plug 'othree/nginx-contrib-vim'
 	Plug 'pangloss/vim-javascript'
 	Plug 'roblillack/vim-bufferlist'
