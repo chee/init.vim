@@ -62,7 +62,7 @@ highlight ColorColumn guibg=#282828
 " so listchars are only visible on the current line
 highlight SpecialKey guifg=#282828
 if has('mouse') | set mouse=a | endif
-set cino=:0,(0
+set cino=:0,(2
 set clipboard=unnamedplus
 set cursorline
 set expandtab
