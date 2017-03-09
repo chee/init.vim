@@ -20,6 +20,7 @@ call plug#begin()
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'elzr/vim-json'
+	Plug 'joonty/vdebug'
 	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
@@ -231,3 +232,6 @@ let g:airline_section_error = '%{ALEGetStatusLine()}'
 
 " NERDTree
 let g:NERDTreeWinSize = 20
+
+" vdebug
+let g:vdebug_options = {'break_on_open': 0}
