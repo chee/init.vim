@@ -151,6 +151,7 @@ command! SudoWrite w !sudo sponge %
 cabbrev w!! <c-r>=(getcmdtype()==':' && getcmdpos()==-1 ? 'SudoWrite' : 'w!!')<cr>
 
 " files/filetypes
+au BufRead,BufNewFile *.wat set filetype=wast
 au BufRead,BufNewFile .wmrc set filetype=dosini
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
