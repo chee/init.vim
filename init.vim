@@ -86,6 +86,9 @@ let g:mapleader="\<SPACE>"
 "TODO maybe these keys should be with their package's settings so
 "		 the settings are grouped by purpose rather than type
 
+" touch files after saving (to force inotify to update)
+cnoreabbrev w w<bar>!touch %<cr>
+
 "" normal
 nnoremap <leader>/ :noh<cr>:<backspace>
 nnoremap <leader>s. :so %<cr>
