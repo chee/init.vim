@@ -31,6 +31,7 @@ call plug#begin()
 	Plug 'mxw/vim-jsx'
 	Plug 'othree/nginx-contrib-vim'
 	Plug 'pangloss/vim-javascript'
+	Plug 'raichoo/purescript-vim'
 	Plug 'rhysd/vim-wasm'
 	Plug 'roblillack/vim-bufferlist'
 	Plug 'ryanoasis/vim-devicons'
