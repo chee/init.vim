@@ -243,3 +243,8 @@ let g:NERDTreeWinSize = 20
 
 " vdebug
 let g:vdebug_options = {'break_on_open': 0}
+
+" use ag if avails
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
