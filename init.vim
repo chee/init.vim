@@ -167,15 +167,17 @@ let g:deoplete#enable_camel_case = 1
 let g:deoplete#max_abbr_width = 0
 let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
-let g:deoplete#auto_complete_delay = 147
 call deoplete#custom#set('_', 'matchers', ['matcher_full_fuzzy'])
 
 " tern
 let g:tern_request_timeout = 1
-let g:tern_request_timeout = 6000
 let g:tern#command = ['tern']
 let g:tern#arguments = ['--persistent']
-let g:deoplete#sources#tss#javascript_support = 0
+let g:tern#filetypes = [
+			\ 'jsx',
+			\ 'javascript.jsx'
+			\ ]
+"let g:deoplete#sources#tss#javascript_support = 1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
