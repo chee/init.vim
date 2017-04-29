@@ -145,13 +145,10 @@ nnoremap <leader>tc :call neoterm#kill()<cr>
 
 "" insert
 """ readline/emacs
-inoremap <C-p> <C-o>k
-inoremap <C-n> <C-o>j
+" inoremap <C-p> <C-o>k
+" inoremap <C-n> <C-o>j
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
-inoremap <C-_> <C-o>u
-inoremap <C-g> <Esc>
-inoremap <C-k> <C-o>d$
 
 command! SudoWrite w !sudo sponge %
 cabbrev w!! <c-r>=(getcmdtype()==':' && getcmdpos()==-1 ? 'SudoWrite' : 'w!!')<cr>
