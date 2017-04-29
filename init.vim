@@ -51,7 +51,6 @@ call plug#begin()
 	Plug 'w0rp/ale'
 	Plug 'xolox/vim-misc'
 call plug#end()
-
 " basics
 colorscheme gruvbox
 filetype plugin indent on
@@ -145,10 +144,10 @@ nnoremap <leader>tc :call neoterm#kill()<cr>
 
 "" insert
 """ readline/emacs
-" inoremap <C-p> <C-o>k
-" inoremap <C-n> <C-o>j
-inoremap <C-e> <C-o>$
-inoremap <C-a> <C-o>^
+nnoremap <C-p> k
+nnoremap <C-n> j
+nnoremap <C-e> $
+nnoremap <C-a> ^
 
 command! SudoWrite w !sudo sponge %
 cabbrev w!! <c-r>=(getcmdtype()==':' && getcmdpos()==-1 ? 'SudoWrite' : 'w!!')<cr>
