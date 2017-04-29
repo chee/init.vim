@@ -91,6 +91,10 @@ let g:mapleader="\<SPACE>"
 cnoreabbrev w w<bar>!touch %<cr>
 
 "" normal
+""" cd to current project root
+""" ( https://gist.github.com/chee/492291caaf54e70caf37680bb05f7641 )
+nnoremap <leader>cd :execute "cd " . system("project " . bufname("%"))<cr>:pwd<cr>
+nnoremap <leader>lcd :execute "lcd " . system("project " . bufname("%"))<cr>:pwd<cr>
 nnoremap <leader>/ :noh<cr>:<backspace>
 nnoremap <leader>s. :so %<cr>
 """ NERDTree
