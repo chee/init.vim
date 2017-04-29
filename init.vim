@@ -34,13 +34,11 @@ call plug#begin()
 	Plug 'raichoo/purescript-vim'
 	Plug 'rhysd/vim-wasm'
 	Plug 'roblillack/vim-bufferlist'
-	Plug 'ryanoasis/vim-devicons'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'stephpy/vim-yaml'
 	Plug 'subosito/nginx.vim'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 	Plug 'terryma/vim-expand-region'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'tpope/vim-abolish'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-fugitive'
