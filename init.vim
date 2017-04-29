@@ -148,6 +148,7 @@ nnoremap <C-p> k
 nnoremap <C-n> j
 nnoremap <C-e> $
 nnoremap <C-a> ^
+inoremap <C-k> <C-o>d$
 
 inoremap <M-BS> <C-w>
 
