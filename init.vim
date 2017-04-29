@@ -85,7 +85,7 @@ let g:mapleader="\<SPACE>"
 "		 the settings are grouped by purpose rather than type
 
 " touch files after saving (to force inotify to update)
-cnoreabbrev w w<bar>!touch %<cr>
+autocmd BufWritePost * silent! !touch %
 
 "" normal
 """ cd to current project root
