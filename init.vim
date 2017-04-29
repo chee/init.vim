@@ -33,6 +33,7 @@ call plug#begin()
 	Plug 'pangloss/vim-javascript'
 	Plug 'raichoo/purescript-vim'
 	Plug 'rhysd/vim-wasm'
+	Plug 'rizzatti/dash.vim'
 	Plug 'roblillack/vim-bufferlist'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'stephpy/vim-yaml'
