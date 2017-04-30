@@ -163,6 +163,8 @@ au BufRead,BufNewFile *.wat set filetype=wast
 au BufRead,BufNewFile .wmrc set filetype=dosini
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
+set visualbell
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
