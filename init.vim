@@ -248,7 +248,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline_skip_empty_sections = 1
 let g:airline_section_error = '%{ALEGetStatusLine()}'
 let g:ale_linters = {
-			\ 'javascript': ['eslint']
+			\ 'javascript': ['eslint', 'flow']
 			\}
 
 " NERDTree
