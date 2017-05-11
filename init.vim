@@ -259,5 +259,5 @@ let g:vdebug_options = {'break_on_open': 0}
 
 " use ag if avails
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep --ignore node_modules'
 endif
