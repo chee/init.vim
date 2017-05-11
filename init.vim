@@ -152,8 +152,11 @@ nnoremap <C-a> ^
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 inoremap <C-k> <C-o>d$
+inoremap <C-M-k> <C-k>
 
 inoremap <M-BS> <C-w>
+cnoremap <M-BS> <C-w>
+nnoremap <M-BS> <C-w>
 
 command! SudoWrite w !sudo sponge %
 cabbrev w!! <c-r>=(getcmdtype()==':' && getcmdpos()==-1 ? 'SudoWrite' : 'w!!')<cr>
