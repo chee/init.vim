@@ -18,6 +18,7 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cakebaker/scss-syntax.vim'
 	Plug 'carlitux/deoplete-ternjs'
+	Plug 'chaoren/vim-wordmotion'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'elzr/vim-json'
 	Plug 'joonty/vdebug'
