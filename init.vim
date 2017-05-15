@@ -154,6 +154,9 @@ inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 inoremap <C-k> <C-o>d$
 inoremap <C-M-k> <C-k>
+inoremap <M-b> <C-o>b
+inoremap <FocusLost> <esc>:w<cr>a
+nnoremap <FocusLost> :w<cr>
 
 inoremap <M-BS> <C-w>
 cnoremap <M-BS> <C-w>
