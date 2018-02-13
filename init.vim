@@ -36,6 +36,7 @@ call plug#begin()
 	Plug 'rizzatti/dash.vim'
 	Plug 'roblillack/vim-bufferlist'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'sheerun/vim-polyglot'
 	Plug 'stephpy/vim-yaml'
 	Plug 'subosito/nginx.vim'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
