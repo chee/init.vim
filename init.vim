@@ -35,6 +35,7 @@ call plug#begin()
 	Plug 'rhysd/vim-wasm'
 	Plug 'rizzatti/dash.vim'
 	Plug 'roblillack/vim-bufferlist'
+	Plug 'ruanyl/vim-fixmyjs'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'sheerun/vim-polyglot'
 	Plug 'stephpy/vim-yaml'
@@ -67,7 +68,6 @@ if has('mouse') | set mouse=a | endif
 set cino=:0,(shiftwidth
 set clipboard=unnamedplus
 set cursorline
-set expandtab
 set hidden
 set ignorecase
 set list
@@ -78,6 +78,7 @@ set shiftwidth=2
 set smartcase
 set tabstop=2
 set termguicolors
+set noexpandtab
 
 " keys
 "" leader
@@ -264,3 +265,7 @@ let g:vdebug_options = {'break_on_open': 0}
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --ignore node_modules'
 endif
+
+" fixmyjs
+let g:fixmyjs_engine = 'eslint'
+let g:fixmyjs_rc_filename = ['.eslintrc', '.eslintrc.json', 'eslintrc.js']
