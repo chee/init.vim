@@ -49,6 +49,7 @@ call plug#begin()
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'w0rp/ale'
+  Plug 'wsdjeg/vim-fetch'
 	Plug 'xolox/vim-misc'
 call plug#end()
 " basics
