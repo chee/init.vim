@@ -48,9 +48,6 @@ call plug#begin()
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'vim-ruby/vim-ruby'
 	Plug 'w0rp/ale'
 	Plug 'xolox/vim-misc'
 call plug#end()
@@ -104,6 +101,9 @@ nnoremap <leader>ff :FZF<cr>
 nnoremap <leader>fh :FZF ~<cr>
 """ ack!
 nnoremap <leader>fa :Ack!<space>
+""" quickfix
+nnoremap <leader>cn :cn<cr>
+nnoremap <leader>cp :cp<cr>
 """ buffer operations
 nnoremap <leader>bn :bnext<cr>
 nnoremap <leader>bp :bprev<cr>
