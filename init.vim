@@ -255,12 +255,8 @@ let g:airline_section_error = '%{ALEGetStatusLine()}'
 let g:ale_linters = {
 			\ 'javascript': ['eslint', 'flow']
 			\}
-let g:ale_fixers = {
-      \   'javascript': [
-      \       'eslint',
-      \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
-      \   ],
-      \}
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fix_on_save = 1
 
 " NERDTree
