@@ -182,7 +182,7 @@ let g:deoplete#enable_camel_case = 1
 let g:deoplete#max_abbr_width = 0
 let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
-call deoplete#custom#set('_', 'matchers', ['matcher_full_fuzzy'])
+call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 
 " tern
 let g:tern_request_timeout = 1
@@ -255,6 +255,13 @@ let g:airline_section_error = '%{ALEGetStatusLine()}'
 let g:ale_linters = {
 			\ 'javascript': ['eslint', 'flow']
 			\}
+let g:ale_fixers = {
+      \   'javascript': [
+      \       'eslint',
+      \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+      \   ],
+      \}
+let g:ale_fix_on_save = 1
 
 " NERDTree
 let g:NERDTreeWinSize = 20
