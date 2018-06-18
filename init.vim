@@ -48,8 +48,9 @@ call plug#begin()
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
+	Plug 'vimlab/neojs'
 	Plug 'w0rp/ale'
-  Plug 'wsdjeg/vim-fetch'
+	Plug 'wsdjeg/vim-fetch'
 	Plug 'xolox/vim-misc'
 call plug#end()
 " basics
