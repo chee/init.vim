@@ -185,6 +185,9 @@ let g:deoplete#max_abbr_width = 0
 let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang'
 
 " tern
 let g:tern_request_timeout = 1
@@ -255,6 +258,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline_skip_empty_sections = 1
 let g:airline_section_error = '%{ALEGetStatusLine()}'
 let g:ale_linters = {
+      \ 'c': ['clang', 'clangtidy', 'flawfinder', 'cppcheck'],
 			\ 'javascript': ['eslint', 'flow']
 			\}
 let g:ale_fixers = {}
