@@ -52,6 +52,7 @@ call plug#begin()
 	Plug 'w0rp/ale'
 	Plug 'wsdjeg/vim-fetch'
 	Plug 'xolox/vim-misc'
+  Plug 'zchee/deoplete-clang'
 call plug#end()
 " basics
 colorscheme gruvbox
