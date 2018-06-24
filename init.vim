@@ -25,6 +25,7 @@ call plug#begin()
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'kassio/neoterm'
+	Plug 'kiddos/deoplete-cpp'
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
@@ -52,7 +53,7 @@ call plug#begin()
 	Plug 'w0rp/ale'
 	Plug 'wsdjeg/vim-fetch'
 	Plug 'xolox/vim-misc'
-  Plug 'zchee/deoplete-clang'
+	Plug 'zchee/deoplete-clang'
 call plug#end()
 " basics
 colorscheme gruvbox
