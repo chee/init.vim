@@ -25,7 +25,6 @@ call plug#begin()
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'kassio/neoterm'
-	Plug 'kiddos/deoplete-cpp'
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
@@ -189,6 +188,7 @@ call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
 let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang'
+let g:deoplete#sources#cpp#arduino_path = '/Application/Arduino.app/Contents/Java'
 
 " tern
 let g:tern_request_timeout = 1
