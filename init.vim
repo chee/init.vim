@@ -46,6 +46,7 @@ call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-rhubarb'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'vimlab/neojs'
