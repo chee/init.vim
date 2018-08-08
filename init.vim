@@ -96,6 +96,9 @@ autocmd BufWritePost * silent! !touch %
 """ ( https://gist.github.com/chee/492291caaf54e70caf37680bb05f7641 )
 nnoremap <leader>cd :execute "cd " . system("project " . bufname("%"))<cr>:pwd<cr>
 nnoremap <leader>lcd :execute "lcd " . system("project " . bufname("%"))<cr>:pwd<cr>
+""" cd to current file
+nnoremap <leader>fcd :cd %:h<cr>:pwd<cr>
+nnoremap <leader>flcd :cd %:h<cr>:pwd<cr>
 nnoremap <leader>/ :noh<cr>:<backspace>
 nnoremap <leader>s. :so %<cr>
 """ NERDTree
