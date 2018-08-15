@@ -28,6 +28,7 @@ call plug#begin()
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
+  Plug 'mustache/vim-mustache-handlebars'
 	Plug 'mxw/vim-jsx'
 	Plug 'othree/nginx-contrib-vim'
 	Plug 'pangloss/vim-javascript'
