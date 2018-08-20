@@ -30,6 +30,7 @@ call plug#begin()
 	Plug 'morhetz/gruvbox'
   Plug 'mustache/vim-mustache-handlebars'
 	Plug 'mxw/vim-jsx'
+  Plug 'neomake/neomake'
 	Plug 'othree/nginx-contrib-vim'
 	Plug 'pangloss/vim-javascript'
 	Plug 'raichoo/purescript-vim'
