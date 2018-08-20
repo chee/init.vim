@@ -13,6 +13,7 @@ call plug#begin()
 		UpdateRemotePlugins
 	endfunction
 	Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+	Plug 'Shougo/unite.vim'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cakebaker/scss-syntax.vim'
