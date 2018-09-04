@@ -29,7 +29,6 @@ call plug#begin()
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'mileszs/ack.vim'
 	Plug 'morhetz/gruvbox'
-  Plug 'mustache/vim-mustache-handlebars'
 	Plug 'mxw/vim-jsx'
   Plug 'neomake/neomake'
 	Plug 'othree/nginx-contrib-vim'
@@ -180,6 +179,7 @@ cabbrev w!! <c-r>=(getcmdtype()==':' && getcmdpos()==-1 ? 'SudoWrite' : 'w!!')<c
 au BufRead,BufNewFile *.wat set filetype=wast
 au BufRead,BufNewFile .wmrc set filetype=dosini
 au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufNewFile,BufRead *.html set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 
 set visualbell
 
