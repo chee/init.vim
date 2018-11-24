@@ -1,61 +1,61 @@
 scriptencoding utf-8
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	augroup init
-		autocmd VimEnter * PlugInstall
-	augroup END
+  augroup init
+    autocmd VimEnter * PlugInstall
+  augroup END
 endif
 
 " plugs
 call plug#begin()
-	function! DoRemote(arg)
-		UpdateRemotePlugins
-	endfunction
-	Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-	Plug 'Shougo/unite.vim'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'cakebaker/scss-syntax.vim'
-	Plug 'carlitux/deoplete-ternjs'
-	Plug 'chaoren/vim-wordmotion'
-	Plug 'editorconfig/editorconfig-vim'
-	Plug 'elzr/vim-json'
-	Plug 'joonty/vdebug'
-	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
-	Plug 'junegunn/goyo.vim'
-	Plug 'junegunn/limelight.vim'
-	Plug 'kassio/neoterm'
-	Plug 'maksimr/vim-jsbeautify'
-	Plug 'mileszs/ack.vim'
-	Plug 'morhetz/gruvbox'
-	Plug 'mxw/vim-jsx'
+  function! DoRemote(arg)
+    UpdateRemotePlugins
+  endfunction
+  Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+  Plug 'Shougo/unite.vim'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'cakebaker/scss-syntax.vim'
+  Plug 'carlitux/deoplete-ternjs'
+  Plug 'chaoren/vim-wordmotion'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'elzr/vim-json'
+  Plug 'joonty/vdebug'
+  Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
+  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/limelight.vim'
+  Plug 'kassio/neoterm'
+  Plug 'maksimr/vim-jsbeautify'
+  Plug 'mileszs/ack.vim'
+  Plug 'morhetz/gruvbox'
+  Plug 'mxw/vim-jsx'
   Plug 'neomake/neomake'
-	Plug 'othree/nginx-contrib-vim'
-	Plug 'pangloss/vim-javascript'
-	Plug 'raichoo/purescript-vim'
-	Plug 'rhysd/vim-wasm'
-	Plug 'rizzatti/dash.vim'
-	Plug 'roblillack/vim-bufferlist'
-	Plug 'ruanyl/vim-fixmyjs'
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-	Plug 'sheerun/vim-polyglot'
-	Plug 'stephpy/vim-yaml'
-	Plug 'subosito/nginx.vim'
-	Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
-	Plug 'terryma/vim-expand-region'
-	Plug 'tpope/vim-abolish'
-	Plug 'tpope/vim-commentary'
-	Plug 'tpope/vim-fugitive'
-	Plug 'tpope/vim-repeat'
-	Plug 'tpope/vim-rhubarb'
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-unimpaired'
-	Plug 'vimlab/neojs'
-	Plug 'w0rp/ale'
-	Plug 'wsdjeg/vim-fetch'
-	Plug 'xolox/vim-misc'
-	Plug 'zchee/deoplete-clang'
+  Plug 'othree/nginx-contrib-vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'raichoo/purescript-vim'
+  Plug 'rhysd/vim-wasm'
+  Plug 'rizzatti/dash.vim'
+  Plug 'roblillack/vim-bufferlist'
+  Plug 'ruanyl/vim-fixmyjs'
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'sheerun/vim-polyglot'
+  Plug 'stephpy/vim-yaml'
+  Plug 'subosito/nginx.vim'
+  Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+  Plug 'terryma/vim-expand-region'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'vimlab/neojs'
+  Plug 'w0rp/ale'
+  Plug 'wsdjeg/vim-fetch'
+  Plug 'xolox/vim-misc'
+  Plug 'zchee/deoplete-clang'
 call plug#end()
 " basics
 colorscheme gruvbox
@@ -88,7 +88,7 @@ set noexpandtab
 let g:mapleader="\<SPACE>"
 
 "TODO maybe these keys should be with their package's settings so
-"		 the settings are grouped by purpose rather than type
+"     the settings are grouped by purpose rather than type
 
 " touch files after saving (to force inotify to update)
 autocmd BufWritePost * silent! !touch %
@@ -203,9 +203,9 @@ let g:tern_request_timeout = 1
 let g:tern#command = ['tern']
 let g:tern#arguments = ['--persistent']
 let g:tern#filetypes = [
-			\ 'jsx',
-			\ 'javascript.jsx'
-			\ ]
+      \ 'jsx',
+      \ 'javascript.jsx'
+      \ ]
 "let g:deoplete#sources#tss#javascript_support = 1
 
 " airline
@@ -218,44 +218,44 @@ let g:jsx_ext_required = 0
 
 " Follow symlinks when opening a file
 function! PlsFollowSymlink(...)
-	if exists('w:no_resolve_symlink') && w:no_resolve_symlink
-		return
-	endif
-	if &filetype ==? 'help'
-		return
-	endif
-	let l:fname = a:0 ? a:1 : expand('%')
-	if l:fname =~# '^\w\+:/'
-		" Do not mess with 'fugitive://' etc.
-		return
-	endif
-	let l:fname = simplify(l:fname)
+  if exists('w:no_resolve_symlink') && w:no_resolve_symlink
+    return
+  endif
+  if &filetype ==? 'help'
+    return
+  endif
+  let l:fname = a:0 ? a:1 : expand('%')
+  if l:fname =~# '^\w\+:/'
+    " Do not mess with 'fugitive://' etc.
+    return
+  endif
+  let l:fname = simplify(l:fname)
 
-	let l:resolvedfile = resolve(l:fname)
-	if l:resolvedfile ==? l:fname
-		return
-	endif
-	let l:resolvedfile = fnameescape(l:resolvedfile)
-	let l:sshm = &shortmess
-	set shortmess+=A	" silence ATTENTION message about swap file (would get displayed twice)
-	redraw	" Redraw now, to avoid hit-enter prompt.
-	exec 'file ' . l:resolvedfile
-	let &shortmess=l:sshm
+  let l:resolvedfile = resolve(l:fname)
+  if l:resolvedfile ==? l:fname
+    return
+  endif
+  let l:resolvedfile = fnameescape(l:resolvedfile)
+  let l:sshm = &shortmess
+  set shortmess+=A  " silence ATTENTION message about swap file (would get displayed twice)
+  redraw  " Redraw now, to avoid hit-enter prompt.
+  exec 'file ' . l:resolvedfile
+  let &shortmess=l:sshm
 
-	unlet! b:git_dir
-	call fugitive#detect(l:resolvedfile)
+  unlet! b:git_dir
+  call fugitive#detect(l:resolvedfile)
 
-	if &modifiable
-		" Only display a note when editing a file, especially not for `:help`.
-		redraw	" Redraw now, to avoid hit-enter prompt.
-		echomsg 'Resolved symlink: =>' l:resolvedfile
-		write!
-	endif
+  if &modifiable
+    " Only display a note when editing a file, especially not for `:help`.
+    redraw  " Redraw now, to avoid hit-enter prompt.
+    echomsg 'Resolved symlink: =>' l:resolvedfile
+    write!
+  endif
 endfunction
 command! -bar FollowSymlink call PlsFollowSymlink()
 command! ToggleFollowSymlink let w:no_resolve_symlink = !get(w:, 'no_resolve_symlink', 0) | echo "w:no_resolve_symlink =>" w:no_resolve_symlink
 augroup init
-	autocmd BufReadPost * nested call PlsFollowSymlink(expand('%'))
+  autocmd BufReadPost * nested call PlsFollowSymlink(expand('%'))
 augroup END
 
 " ale / airline-ale
@@ -268,8 +268,8 @@ let g:airline_skip_empty_sections = 1
 let g:airline_section_error = '%{ALEGetStatusLine()}'
 let g:ale_linters = {
       \ 'c': ['clang', 'clangtidy', 'flawfinder', 'cppcheck'],
-			\ 'javascript': ['eslint', 'flow']
-			\}
+      \ 'javascript': ['eslint', 'flow']
+      \}
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fix_on_save = 1
