@@ -82,6 +82,7 @@ set smartcase
 set tabstop=2
 set termguicolors
 set noexpandtab
+set backupcopy=yes
 
 " keys
 "" leader
