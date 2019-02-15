@@ -21,6 +21,7 @@ call plug#begin()
   Plug 'chaoren/vim-wordmotion'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'elzr/vim-json'
+  Plug 'jalvesaq/vimcmdline'
   Plug 'joonty/vdebug'
   Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
   Plug 'junegunn/goyo.vim'
@@ -28,7 +29,7 @@ call plug#begin()
   Plug 'kassio/neoterm'
   Plug 'maksimr/vim-jsbeautify'
   Plug 'mileszs/ack.vim'
-  Plug 'morhetz/gruvbox'
+  " Plug 'morhetz/gruvbox'
   Plug 'mxw/vim-jsx'
   Plug 'neomake/neomake'
   Plug 'othree/nginx-contrib-vim'
@@ -58,13 +59,15 @@ call plug#begin()
   Plug 'zchee/deoplete-clang'
 call plug#end()
 " basics
-colorscheme gruvbox
+" colorscheme gruvbox
+" colorscheme peachpuff
 filetype plugin indent on
-set background=dark
+set background=light
 hi Search guibg=#ff2a50 guifg=#ffffff
 let &colorcolumn=join(range(81,250), ',')
 " gruvbox's dark0, so it just looks like cursorline stops at 80
-highlight ColorColumn guibg=#282828
+" highlight ColorColumn guibg=#282828
+highlight ColorColumn guibg=#ffe9ed
 " so listchars are only visible on the current line
 highlight SpecialKey guifg=#282828
 if has('mouse') | set mouse=a | endif
@@ -212,7 +215,7 @@ let g:tern#filetypes = [
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'gruvbox'
 
 " jsx
 let g:jsx_ext_required = 0
