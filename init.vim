@@ -29,7 +29,7 @@ call plug#begin()
   Plug 'kassio/neoterm'
   Plug 'maksimr/vim-jsbeautify'
   Plug 'mileszs/ack.vim'
-  " Plug 'morhetz/gruvbox'
+  Plug 'morhetz/gruvbox'
   Plug 'mxw/vim-jsx'
   Plug 'neomake/neomake'
   Plug 'othree/nginx-contrib-vim'
@@ -39,6 +39,7 @@ call plug#begin()
   Plug 'rizzatti/dash.vim'
   Plug 'roblillack/vim-bufferlist'
   Plug 'ruanyl/vim-fixmyjs'
+  Plug 'sbdchd/neoformat'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'sheerun/vim-polyglot'
   Plug 'stephpy/vim-yaml'
@@ -58,16 +59,18 @@ call plug#begin()
   Plug 'xolox/vim-misc'
   Plug 'zchee/deoplete-clang'
 call plug#end()
+
 " basics
 " colorscheme gruvbox
-" colorscheme peachpuff
+colorscheme peachpuff
 filetype plugin indent on
+set background=dark
 set background=light
-hi Search guibg=#ff2a50 guifg=#ffffff
-let &colorcolumn=join(range(81,250), ',')
+" hi Search guibg=#ff2a50 guifg=#ffffff
+" let &colorcolumn=join(range(81,250), ',')
 " gruvbox's dark0, so it just looks like cursorline stops at 80
 " highlight ColorColumn guibg=#282828
-highlight ColorColumn guibg=#ffe9ed
+" highlight ColorColumn guibg=#ffe9ed
 " so listchars are only visible on the current line
 highlight SpecialKey guifg=#282828
 if has('mouse') | set mouse=a | endif
@@ -86,6 +89,9 @@ set tabstop=2
 set termguicolors
 set noexpandtab
 set backupcopy=yes
+
+" neoformat (prettier)
+autocmd BufWritePre *.js Neoformat
 
 " keys
 "" leader
