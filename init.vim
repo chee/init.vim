@@ -12,12 +12,12 @@ call plug#begin()
   function! DoRemote(arg)
     UpdateRemotePlugins
   endfunction
-  Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+  " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
   Plug 'Shougo/unite.vim'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'cakebaker/scss-syntax.vim'
-  Plug 'carlitux/deoplete-ternjs'
+  " Plug 'carlitux/deoplete-ternjs'
   Plug 'chaoren/vim-wordmotion'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'elzr/vim-json'
@@ -37,6 +37,7 @@ call plug#begin()
   Plug 'raichoo/purescript-vim'
   Plug 'rhysd/vim-wasm'
   Plug 'rizzatti/dash.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'roblillack/vim-bufferlist'
   Plug 'ruanyl/vim-fixmyjs'
   Plug 'sbdchd/neoformat'
@@ -57,15 +58,15 @@ call plug#begin()
   Plug 'w0rp/ale'
   Plug 'wsdjeg/vim-fetch'
   Plug 'xolox/vim-misc'
-  Plug 'zchee/deoplete-clang'
+  " Plug 'zchee/deoplete-clang'
 call plug#end()
 
 " basics
-" colorscheme gruvbox
-colorscheme peachpuff
+colorscheme gruvbox
+" colorscheme peachpuff
 filetype plugin indent on
 set background=dark
-set background=light
+" set background=light
 " hi Search guibg=#ff2a50 guifg=#ffffff
 " let &colorcolumn=join(range(81,250), ',')
 " gruvbox's dark0, so it just looks like cursorline stops at 80
@@ -105,7 +106,7 @@ autocmd BufWritePost * silent! !touch %
 
 "" normal
 """ cd to current project root
-""" ( https://gist.github.com/chee/492291caaf54e70caf37680bb05f7641 )
+""" ( https://gist.github.com/chee/492290caaf54e70caf37680bb05f7641 )
 nnoremap <leader>cd :execute "cd " . system("project " . bufname("%"))<cr>:pwd<cr>
 nnoremap <leader>lcd :execute "lcd " . system("project " . bufname("%"))<cr>:pwd<cr>
 """ cd to current file
@@ -194,19 +195,16 @@ au BufNewFile,BufRead *.html set filetype=html.handlebars syntax=mustache | runt
 set visualbell
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#max_abbr_width = 0
-let g:deoplete#max_menu_width = 0
-let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
-call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
-call deoplete#custom#source('clang', 'filetypes', ['c', 'cpp', 'arduino'])
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
-let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang'
-let g:deoplete#sources#cpp#arduino_path = '/Application/Arduino.app/Contents/Java'
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_ignore_case = 1
+" let g:deoplete#enable_smart_case = 1
+" let g:deoplete#enable_camel_case = 1
+" let g:deoplete#max_abbr_width = 0
+" let g:deoplete#max_menu_width = 0
+" let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
+" call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+" call deoplete#custom#source('clang', 'filetypes', ['c', 'cpp', 'arduino'])
+" let g:deoplete#enable_at_startup = 1
 
 " tern
 let g:tern_request_timeout = 1
@@ -221,52 +219,11 @@ let g:tern#filetypes = [
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-" let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'gruvbox'
 
 " jsx
 let g:jsx_ext_required = 0
 
-" Follow symlinks when opening a file
-function! PlsFollowSymlink(...)
-  if exists('w:no_resolve_symlink') && w:no_resolve_symlink
-    return
-  endif
-  if &filetype ==? 'help'
-    return
-  endif
-  let l:fname = a:0 ? a:1 : expand('%')
-  if l:fname =~# '^\w\+:/'
-    " Do not mess with 'fugitive://' etc.
-    return
-  endif
-  let l:fname = simplify(l:fname)
-
-  let l:resolvedfile = resolve(l:fname)
-  if l:resolvedfile ==? l:fname
-    return
-  endif
-  let l:resolvedfile = fnameescape(l:resolvedfile)
-  let l:sshm = &shortmess
-  set shortmess+=A  " silence ATTENTION message about swap file (would get displayed twice)
-  redraw  " Redraw now, to avoid hit-enter prompt.
-  exec 'file ' . l:resolvedfile
-  let &shortmess=l:sshm
-
-  unlet! b:git_dir
-  call fugitive#detect(l:resolvedfile)
-
-  if &modifiable
-    " Only display a note when editing a file, especially not for `:help`.
-    redraw  " Redraw now, to avoid hit-enter prompt.
-    echomsg 'Resolved symlink: =>' l:resolvedfile
-    write!
-  endif
-endfunction
-command! -bar FollowSymlink call PlsFollowSymlink()
-command! ToggleFollowSymlink let w:no_resolve_symlink = !get(w:, 'no_resolve_symlink', 0) | echo "w:no_resolve_symlink =>" w:no_resolve_symlink
-augroup init
-  autocmd BufReadPost * nested call PlsFollowSymlink(expand('%'))
-augroup END
 
 " ale / airline-ale
 let g:ale_sign_column_always = 1
